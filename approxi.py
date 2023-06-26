@@ -1,6 +1,5 @@
-
-import math
 import copy
+
 from syntax import *
 from Generic import *
 from Concrete import *
