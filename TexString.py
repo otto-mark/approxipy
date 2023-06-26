@@ -18,9 +18,9 @@ class TexString(Generic):
             def exp(self, v):
                 return f"\\exp\\left( {v} \\right)"
             def plus(self, l, r):
-                return f"{l} + {r}"
+                return f"\\left({l} + {r}\\right)"
             def minus(self, l, r):
-                return f"{l} - {r}"
+                return f"\\left({l} - {r}\\right)"
             def mul(self, l, r):
                 return f"{l} \cdot {r}"
             def div(self, l, r):

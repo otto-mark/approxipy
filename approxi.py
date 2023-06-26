@@ -129,6 +129,9 @@ def approx(vals, depth=3):
         for v in vals:
             up = apps[v][0][0].simplify()
             down = apps[v][1][0].simplify()
+            if v == 18.5:
+                print("UP", up)
+                print("DOWN", down)
             if up != Mt():
                 file.write(f"{v} &\\geq {tex.eval(up)} &&= {round(con.eval(up), 5)}\\\\\n")
             if down != Mt():
@@ -140,7 +143,12 @@ def approx(vals, depth=3):
 def main():
     li =[ i/2 for i in range(1, 2*20)]
     approx(li, 5)
+    # s = Plus(Mul(Pi(), Pi()), Div(Pi(), Log(Pi(), E())))
+    # p = PyString()
 
+    # print(p.eval(s))
+    # xs = s.simplify()
+    # print(p.eval(xs))
 
 if __name__ == "__main__":
     main()
